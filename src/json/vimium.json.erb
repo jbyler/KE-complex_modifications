@@ -9,6 +9,7 @@
                 <%# press esc to enter vimium mode, i to leave %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "press esc to enter vimium mode",
                     "type": "basic",
                     "from": <%= from("escape", [], ["caps_lock"]) %>,
                     "to": [
@@ -19,6 +20,7 @@
                     ]
                 },
                 {
+                    "description": "pass through esc while in vimium mode",
                     "type": "basic",
                     "from": <%= from("escape", [], ["caps_lock"]) %>,
                     "to": <%= to([["escape"]]) %>,
@@ -27,6 +29,7 @@
                     ]
                 },
                 {
+                    "description": "press i to leave vimium mode",
                     "type": "basic",
                     "from": <%= from("i", [], ["caps_lock"]) %>,
                     "to": [
@@ -41,6 +44,7 @@
                 <%# press g to trigger vimium_g_tapped (wait for another key) %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "press g to trigger vimium_g_tapped (wait for another key)",
                     "type": "basic",
                     "from": <%= from("g", [], ["caps_lock"]) %>,
                     "to": [
@@ -56,6 +60,7 @@
                 <%# change h/j/k/l to arrow keys %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "change h to left_arrow",
                     "type": "basic",
                     "from": <%= from("h", [], ["caps_lock"]) %>,
                     "to": <%= to([["left_arrow"]]) %>,
@@ -64,6 +69,7 @@
                     ]
                 },
                 {
+                    "description": "change j to down_arrow",
                     "type": "basic",
                     "from": <%= from("j", [], ["caps_lock"]) %>,
                     "to": <%= to([["down_arrow"]]) %>,
@@ -72,6 +78,7 @@
                     ]
                 },
                 {
+                    "description": "change k to up_arrow",
                     "type": "basic",
                     "from": <%= from("k", [], ["caps_lock"]) %>,
                     "to": <%= to([["up_arrow"]]) %>,
@@ -80,6 +87,7 @@
                     ]
                 },
                 {
+                    "description": "change l to right_arrow",
                     "type": "basic",
                     "from": <%= from("l", [], ["caps_lock"]) %>,
                     "to": <%= to([["right_arrow"]]) %>,
@@ -92,6 +100,7 @@
                 <%# change gg/G to home/end %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "change gg to home",
                     "type": "basic",
                     "from": <%= from("g", [], ["caps_lock"]) %>,
                     "to": [
@@ -103,6 +112,7 @@
                     ]
                 },
                 {
+                    "description": "change G to end",
                     "type": "basic",
                     "from": <%= from("g", ["shift"], ["caps_lock"]) %>,
                     "to": <%= to([["end"]]) %>,
@@ -115,6 +125,7 @@
                 <%# change b/f to page_up/page_down %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "change b to page_up",
                     "type": "basic",
                     "from": <%= from("b", [], ["caps_lock", "control"]) %>,
                     "to": <%= to([["page_up"]]) %>,
@@ -123,6 +134,7 @@
                     ]
                 },
                 {
+                    "description": "change f to page_down",
                     "type": "basic",
                     "from": <%= from("f", [], ["caps_lock", "control"]) %>,
                     "to": <%= to([["page_down"]]) %>,
@@ -134,6 +146,7 @@
                 <%# press control + u/d to scroll 20 lines up/down %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "press control + u to scroll 20 lines up",
                     "type": "basic",
                     "from": <%= from("u", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([
@@ -149,6 +162,7 @@
                     ]
                 },
                 {
+                    "description": "press control + d to scroll 20 lines down",
                     "type": "basic",
                     "from": <%= from("d", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([
@@ -165,9 +179,10 @@
                 },
 
                 <%# -------------------------------------------------- %>
-                <%# press slash to search, n/N to cycle forward/backword %>
+                <%# press slash to search, n/N to cycle forward/backward %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "press slash to search (sends cmd+f)",
                     "type": "basic",
                     "from": <%= from("slash", [], ["caps_lock"]) %>,
                     "to": [
@@ -180,6 +195,7 @@
                     ]
                 },
                 {
+                    "description": "press n to cycle forward (sends cmd+g)",
                     "type": "basic",
                     "from": <%= from("n", [], ["caps_lock"]) %>,
                     "to": <%= to([["g", ["left_command"]]]) %>,
@@ -189,6 +205,7 @@
                     ]
                 },
                 {
+                    "description": "press N to cycle backward (sends cmd+shift+g)",
                     "type": "basic",
                     "from": <%= from("n", ["shift"], ["caps_lock"]) %>,
                     "to": <%= to([["g", ["left_command", "left_shift"]]]) %>,
@@ -202,6 +219,7 @@
                 <%# press J/K or gT/gt to switch between tabs %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "press J to switch between tabs (sends ctrl+shift+tab)",
                     "type": "basic",
                     "from": <%= from("j", ["shift"], ["caps_lock"]) %>,
                     "to": <%= to([["tab", ["left_control", "left_shift"]]]) %>,
@@ -211,6 +229,7 @@
                     ]
                 },
                 {
+                    "description": "press K to switch between tabs (sends ctrl+tab)",
                     "type": "basic",
                     "from": <%= from("k", ["shift"], ["caps_lock"]) %>,
                     "to": <%= to([["tab", ["left_control"]]]) %>,
@@ -220,6 +239,7 @@
                     ]
                 },
                 {
+                    "description": "press gT to switch between tabs (sends ctrl+shift+tab)",
                     "type": "basic",
                     "from": <%= from("t", ["shift"], ["caps_lock"]) %>,
                     "to": [
@@ -232,6 +252,7 @@
                     ]
                 },
                 {
+                    "description": "press gt to switch between tabs (sends ctrl+tab)",
                     "type": "basic",
                     "from": <%= from("t", [], ["caps_lock"]) %>,
                     "to": [
@@ -248,6 +269,7 @@
                 <%# press g0/g$ to go to the first/last tab %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "press g0 to go to the first tab (sends cmd+1)",
                     "type": "basic",
                     "from": <%= from("0", [], ["caps_lock"]) %>,
                     "to": [
@@ -260,6 +282,7 @@
                     ]
                 },
                 {
+                    "description": "press g$ (or g4) to go to the last tab (sends cmd+1, ctrl+shift+tab)",
                     "type": "basic",
                     "from": <%= from("4", [], ["caps_lock", "shift"]) %>,
                     "to": [
@@ -277,6 +300,7 @@
                 <%# press x/X to close/restore tab %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "press x to close tab (sends cmd+w)",
                     "type": "basic",
                     "from": <%= from("x", [], ["caps_lock"]) %>,
                     "to": <%= to([["w", ["left_command"]]]) %>,
@@ -286,6 +310,7 @@
                     ]
                 },
                 {
+                    "description": "press X to undo close tab (sends cmd+shift+t)",
                     "type": "basic",
                     "from": <%= from("x", ["shift"], ["caps_lock"]) %>,
                     "to": <%= to([["t", ["left_command", "left_shift"]]]) %>,
@@ -299,6 +324,7 @@
                 <%# change t to command + t, r to command + r %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "change t to command + t",
                     "type": "basic",
                     "from": <%= from("t", [], ["caps_lock"]) %>,
                     "to": <%= to([["t", ["left_command"]]]) %>,
@@ -308,6 +334,7 @@
                     ]
                 },
                 {
+                    "description": "change r to command + r",
                     "type": "basic",
                     "from": <%= from("r", [], ["caps_lock"]) %>,
                     "to": <%= to([["r", ["left_command"]]]) %>,
@@ -321,6 +348,7 @@
                 <%# press u / control+r to undo/redo %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "press u undo (sends cmd+z)",
                     "type": "basic",
                     "from": <%= from("u", [], ["caps_lock"]) %>,
                     "to": <%= to([["z", ["left_command"]]]) %>,
@@ -330,6 +358,7 @@
                     ]
                 },
                 {
+                    "description": "press control+r to redo (sends cmd+shift+z)",
                     "type": "basic",
                     "from": <%= from("r", ["control"], ["caps_lock"]) %>,
                     "to": <%= to([["z", ["left_command", "left_shift"]]]) %>,
@@ -343,6 +372,7 @@
                 <%# normallize shift specially so it won't cancel vimium_g_tapped %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "normallize left_shift specially so it won't cancel vimium_g_tapped",
                     "type": "basic",
                     "from": <%= from("left_shift", [], []) %>,
                     "to": <%= to([["left_shift"]]) %>,
@@ -351,6 +381,7 @@
                     ]
                 },
                 {
+                    "description": "normallize right_shift specially so it won't cancel vimium_g_tapped",
                     "type": "basic",
                     "from": <%= from("right_shift", [], []) %>,
                     "to": <%= to([["right_shift"]]) %>,
@@ -363,6 +394,7 @@
                 <%# press other keys to cancel vimium_g_tapped %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "press other keys to cancel vimium_g_tapped",
                     "type": "basic",
                     "from": {
                         "any": "key_code",
@@ -380,6 +412,7 @@
                 <%# normallize shift and control so they won't be dropped %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "normallize left_shift so it won't be dropped",
                     "type": "basic",
                     "from": <%= from("left_shift", [], []) %>,
                     "to": <%= to([["left_shift"]]) %>,
@@ -388,6 +421,7 @@
                     ]
                 },
                 {
+                    "description": "normallize right_shift so it won't be dropped",
                     "type": "basic",
                     "from": <%= from("right_shift", [], []) %>,
                     "to": <%= to([["right_shift"]]) %>,
@@ -396,6 +430,7 @@
                     ]
                 },
                 {
+                    "description": "normallize left_control so it won't be dropped",
                     "type": "basic",
                     "from": <%= from("left_control", [], []) %>,
                     "to": <%= to([["left_control"]]) %>,
@@ -404,6 +439,7 @@
                     ]
                 },
                 {
+                    "description": "normallize right_control so it won't be dropped",
                     "type": "basic",
                     "from": <%= from("right_control", [], []) %>,
                     "to": <%= to([["right_control"]]) %>,
@@ -416,6 +452,7 @@
                 <%# drop other keys in vimium mode %>
                 <%# -------------------------------------------------- %>
                 {
+                    "description": "drop other keys in vimium mode",
                     "type": "basic",
                     "from": {
                         "any": "key_code",
